@@ -10,11 +10,15 @@ This project is a starter implementation for an HR management backend featuring:
 - Docker + docker-compose setup for quick testing
 
 ## Quick start
-1. Create `.env` file and set DB credentials.
-2. Run with Docker Compose: ` docker-compose up -d --build `
-3. Run migrations: ` docker-compose run --rm hr_backend npm run migrate `
-4. Then Run Seed ` docker-compose run --rm hr_backend npm run seed `
-5. server running port : ` http://localhost:4000/ `
+### 1. Clone repo
+
+1. Clone repo  ` git clone https://github.com/<your-username>/hr-backend.git
+                 cd hr-backend `
+2. Create `.env` file and set DB credentials.
+3. Run with Docker Compose: ` docker-compose up -d --build `
+4. Run migrations: ` docker-compose run --rm hr_backend npm run migrate `
+5. Then Run Seed ` docker-compose run --rm hr_backend npm run seed `
+6. server running port : ` http://localhost:4000/ `
 
 Endpoints:
 - POST /auth/login { email, password }
