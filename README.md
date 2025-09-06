@@ -14,17 +14,7 @@ This project is a starter implementation for an HR management backend featuring:
 
 1. Clone repo  ` https://github.com/Avi781/hr-management-backend.git `
                ` cd hr-management-backend `
-2. Create `.env` file and set DB credentials.
-            ` PORT=4000
-              NODE_ENV=
-              JWT_SECRET=
-              DB_HOST=
-              DB_PORT=5432
-              DB_USER=
-              DB_PASSWORD=
-              DB_NAME=
-              UPLOAD_PATH=
-              JWT_EXPIRES = `
+2. Copy .env.example to `.env` file and set DB credentials.
 
 3. Run with Docker Compose: ` docker-compose up -d --build `
 4. Run migrations: ` docker-compose run --rm hr_backend npm run migrate `
