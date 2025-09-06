@@ -12,7 +12,7 @@ This project is a starter implementation for an HR management backend featuring:
 ## Quick start
 ### 1. Clone repo
 
-1. Clone repo  ` https://github.com/Avi781/hr-management-backend `
+1. Clone repo  ` https://github.com/Avi781/hr-management-backend.git `
                ` cd hr-management-backend `
 2. Create `.env` file and set DB credentials.
 3. Run with Docker Compose: ` docker-compose up -d --build `
