@@ -1,0 +1,40 @@
+
+services:
+  hr_postgres:
+    image: postgres:15
+    container_name: hr_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: avi
+      POSTGRES_DB: hr_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  hr_backend:
+    build: .
+    container_name: hr_backend
+    restart: always
+    depends_on:
+      - hr_postgres
+    environment:
+      PORT: 4000
+      NODE_ENV: development
+      JWT_SECRET: aviafridsecret
+      JWT_EXPIRES: 8h
+      DB_HOST: hr_postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: avi
+      DB_NAME: hr_db
+      UPLOAD_PATH: /app/uploads
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+volumes:
+  pgdata:
